@@ -327,8 +327,12 @@ footer h2 { font-weight: bold; }
 	text-align:center;
 }
 
-footer p, footer address, footer h2 {
-	font-family: 'Zilla Slab', 'Times New Roman', Times, serif;
+footer p, footer address {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+footer h2 {
+	font-family: 'Bangers', 'Times New Roman', Times, serif;
 }
 
 /* Responsive Design I - Media Queries */
@@ -356,5 +360,48 @@ footer p, footer address, footer h2 {
     }
     header.index_header div:first-of-type {
         margin-right: 0;
+    }
+}
+
+@media only screen and (max-width: 500px){
+    /* Navigation */
+    .navigation ul {
+        flex-direction: column;
+    }
+
+    .navigation ul li {
+        padding: 15px 0;
+        width: 100vw;
+        text-align:center;
+        border-bottom: 1px solid gray;
+    }
+
+    .navigation ul li:first-of-type {
+        border-top: 1px solid gray;
+    }
+
+    /* Info Area */
+    .info_top {
+        flex-direction: column;
+    }
+
+    .info_top div {
+        width: 100%;
+    }
+
+    .info_top div:last-of-type {
+        margin: 25px 0 0 0;
+    }
+
+    .info_bottom {
+        flex-direction: column;
+    }
+
+    .info_bottom div {
+        width: 100%;
+    }
+
+    .info_bottom div:not(:first-of-type) {
+        margin: 25px 0 0 0;
     }
 }
