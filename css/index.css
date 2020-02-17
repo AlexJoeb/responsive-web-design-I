@@ -1,3 +1,360 @@
-/* Use your own code or past solution for Great Idea Web Page CSS here! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Set every element's box-sizing to border-box */
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Bangers', cursive;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+/* Your code starts here! */
+
+/* Container */
+.container{
+	width: 80vw;
+	margin: 0 auto;
+}
+
+/* Navigation */
+.navigation {
+    display: flex;
+    justify-content: space-between;
+	width: 100%;
+	padding: 30px 0;
+}
+
+.navigation ul {
+    display:flex;
+    flex-grow: 1;
+	justify-content: space-between;
+	align-items: center;
+	
+}
+
+.navigation ul li a {
+	text-decoration: none;
+	color:gray;
+}
+
+.navigation ul li a:hover {
+	text-decoration: underline;
+}
+
+/* Header */
+header.index_header {
+	width: 100%;
+	text-align: center;
+
+	display:flex;
+	justify-content: center;
+	align-items: center;
+}
+
+header.index_header div:first-of-type {
+	text-align: center;
+	font-size: 70px;
+
+	margin: 0 20% 0 0;
+}
+
+header.index_header button {
+	border: 1px solid black;
+	padding: 5px 30px;
+	font-size: 15px;
+}
+
+header.index_header button:hover {
+	cursor: pointer;
+}
+
+header.index_header button:active, header button:focus {
+	outline: none;
+}
+
+header.index_header div:last-of-type{
+	text-align: center;
+}
+
+/* Services Header */
+
+header.services_header {
+	display: flex;
+	flex-flow: column nowrap;
+	align-items: flex-start;
+
+	padding-bottom: 25px;
+}
+
+.services-header-img {
+	width: 100%;
+	height: 225px;
+	background: url('../img/services-header.jpg') center center no-repeat;
+	background-size: cover;
+	margin-bottom: 20px;
+}
+
+.services_header .header_text h1 {
+	font-size: 1.5rem;
+}
+
+/* Info Section */
+.info {
+	height: auto; width: 100%;
+	border-top: 1px solid black;
+	border-bottom: 1px solid black;
+	padding: 40px 0;
+	margin: 50px 0 20px;
+}
+
+.info_top {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.info_top div {
+	width: 48%;
+}
+
+.info_top div:last-of-type {
+	margin-left: 20px;
+}
+
+.info_top div + div {
+	margin-left: 1.75%;
+}
+
+.info_middle {
+	width: 100%;
+	margin: 40px 0;
+}
+
+.info_bottom {
+	width: 100%;
+	display: flex;
+	justify-items: space-between;
+}
+
+.info_bottom div {
+	width: 32%;
+}
+
+.info_bottom div + div {
+	margin-left: 1.75%;
+}
 
 
+/* Stretch */
+
+.img1 {
+	height: 40px; width: 190px;
+    background: url('../img/logo.png') no-repeat center center;
+    margin-left: 10%;
+}
+
+.img2 {
+	height: 400px; width: 400px;
+	background: url('../img/header-img.png') no-repeat center center;
+}
+
+.img3 {
+	height: 200px; width: 100%;
+	background: url('../img/mid-page-accent.jpg') no-repeat center center;
+	background-size: cover;
+}
+
+button:hover {
+	background:black;
+	color:white;
+	border: 1px solid white;
+}
+
+.animate:hover {
+	animation: rotate 1s ease-in-out;
+}
+
+@keyframes rotate {
+	0% { transform: rotate(0deg); }
+	50% { transform: rotate(1000deg); }
+	100% { transform: rotate(0deg); }
+}
+
+/* Services Cards */
+.cards {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+	border-bottom: 1px solid black;
+	border-top: 1px solid black;
+	padding-top: 25px;
+	padding-bottom: 25px;
+}
+
+@media only screen and (max-width: 768px){
+	.cards {
+		flex-flow: column nowrap;
+	}
+
+	.card {
+		flex-basis: 100%;
+	}
+}
+
+@media only screen and (min-width: 769px){
+	.card:nth-last-child(2){
+		margin-bottom: 0;
+	}
+}
+
+.card:last-child {
+	margin-bottom: 0;
+}
+
+.card {
+	flex-basis: 48%;
+	margin-bottom: 25px;
+
+	background: #F4F3F4;
+	border: 1px solid black;
+
+	padding: 15px;
+}
+
+.card_text {
+	margin-bottom: 15px;
+}
+
+.card_btn {
+	background:white;
+	border: 1px solid black;
+	padding: 5px 15px;
+}
+
+/* Service Facts */
+
+.servicefacts {
+	display:flex;
+	padding-top: 25px;
+}
+
+.servicefacts_left {
+	display:flex;
+	flex-flow: column nowrap;
+	padding-right: 25px;
+}
+
+.servicefacts ul {
+	list-style: disc;
+	margin-top: 20px;
+	margin-left: 20px;
+}
+
+.servicefacts ul li + li {
+	margin-top: 10px;
+}
+
+/* Footer */
+footer {
+	height: 150px;
+	margin-bottom: 100px;
+}
+
+footer p {
+	margin-top: 20px;
+}
+
+footer h2 { font-weight: bold; }
+
+.footer_copyright {
+	margin-top: 50px;
+	text-align:center;
+}
+
+footer p, footer address, footer h2 {
+	font-family: 'Zilla Slab', 'Times New Roman', Times, serif;
+}
+
+/* Responsive Design I - Media Queries */
+@media only screen and (max-width: 800px){
+    /* Container */
+    .container {
+        width: 90vw;
+    }
+    /* Navigation Styles */
+    .navigation {
+        flex-direction: column-reverse;
+        justify-content: center;
+    }
+    .navigation .img1 {
+        align-self: center;
+        margin-left: 0;
+    }
+
+    .navigation ul {
+        margin: 40px 0 30px;
+    }
+    /* Header Styles */
+    header.index_header div:last-of-type {
+        display:none;
+    }
+    header.index_header div:first-of-type {
+        margin-right: 0;
+    }
+}
