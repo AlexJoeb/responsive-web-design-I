@@ -361,6 +361,14 @@ footer h2 {
     header.index_header div:first-of-type {
         margin-right: 0;
     }
+	
+	.servicefacts{
+		flex-direction: column-reverse;
+	}
+
+	.servicefacts_left {
+		margin-top: 25px;
+	}
 }
 
 @media only screen and (max-width: 500px){
@@ -403,5 +411,5 @@ footer h2 {
 
     .info_bottom div:not(:first-of-type) {
         margin: 25px 0 0 0;
-    }
+	}
 }
